@@ -1,5 +1,5 @@
 <?php
-$feed_url = "http://blog.whitegx.ga/feed";
+$feed_url = "http://blog.whitegx.top/index.php/feed/?i=1";
 $data = simplexml_load_file($feed_url)->channel->item;
 $resp = [
     "status" => 0,
