@@ -20,6 +20,15 @@ body::before {
     pointer-events: none;
 }
 
+/* 顶部导航栏下滑时设为透明 */
+.mdui-appbar,
+.mdui-appbar .mdui-toolbar,
+.mdui-toolbar.mdui-color-theme {
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
 /* 让主要容器透明，避免大块底色遮挡背景 */
 main,
 .mdui-container,
@@ -39,6 +48,7 @@ main,
     margin-left: auto !important;
 }
 
+/* 首屏“欢迎来到这里！”标题样式 */
 .banner-title {
     font-weight: 400;
     filter: brightness(1.3);
@@ -48,16 +58,16 @@ main,
     -ms-filter: brightness(1);
 }
 
-/* 卡片设为半透明，既能看到背景又保证文字清晰 */
+/* 卡片设为半透明并加大圆角 */
 .card,
 .mdui-card {
     max-width: 650px;
     margin: 20px auto;
-    border-radius: 16px !important; /* 想更圆就调大，比如 20px 或 24px */
+    border-radius: 16px !important;
     background-color: rgba(255, 255, 255, 0.85) !important;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    overflow: hidden; /* 防止内部内容/高亮溢出把圆角撑成直角 */
+    overflow: hidden;
 }
 
 #support * {
